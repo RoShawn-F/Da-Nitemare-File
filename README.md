@@ -1,5 +1,6 @@
-# Da-Nitemare-File
-#An optional challenge that created by the instructors at VetsInTech... it was cool to do but it was exhausting (or Maybe I just need to go to bed) ^_^
+### Da-Nitemare-File
+### An optional challenge that created by the instructors at VetsInTech...
+### it was cool to do but it was exhausting (or Maybe I just need to go to bed) ^_^
 
 next_url = character_url
 all_characters = []
@@ -13,15 +14,16 @@ while next_url:
     time.sleep(0.5)
 
 
-# set up a workbook and worksheet titled "Rick and Morty Characters"
+### set up a workbook and worksheet titled "Rick and Morty Characters"
 
 print(data["results"][0].keys())
 
 headers = ["id", "name", "status", "species", "type", "gender", "origin", "location", "image", "episode", "url", "created"]
-# # assign a variable 'data' with the returned GET request
+
+### assign a variable 'data' with the returned GET request
 for col_num, header in enumerate(headers, 1):
     ws.cell(row=1, column=col_num, value=header)
-# create the appropriate headers in openpyxl for all of the keys for a single character
+### create the appropriate headers in openpyxl for all of the keys for a single character
 for row_num, character in enumerate(all_characters, 2):
     if character["episode"]: 
         print("processing episodes for:", character["name"])
@@ -38,6 +40,6 @@ for row_num, character in enumerate(all_characters, 2):
     for col_num, value in enumerate(character.values(), 1):
         ws.cell(row=row_num, column=col_num, value=str(value))
 
-# loop through all of the 'results' of the data to populate the rows and columns for each character
+### loop through all of the 'results' of the data to populate the rows and columns for each character
 
-# NOTE: due to the headers, the rows need to be offset by one!
+### NOTE: due to the headers, the rows need to be offset by one!
