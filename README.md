@@ -1,5 +1,6 @@
 # Da-Nitemare-File
 #An optional challenge that created by the instructors at VetsInTech... it was cool to do but it was exhausting (or Maybe I just need to go to bed) ^_^
+
 next_url = character_url
 all_characters = []
 
